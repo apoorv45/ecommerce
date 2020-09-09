@@ -4,7 +4,7 @@ let conn = new MySqli({
     host: 'localhost',
     port: 3306,
     user: 'mega boss',
-    pass: 'bhushan77',
+    passwd: 'bhushan77',
     db: 'eccommerce_shop'
 });
 

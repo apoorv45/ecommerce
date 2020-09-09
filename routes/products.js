@@ -37,10 +37,13 @@ const limit = (req.query.limit != undefined && req.query.limit != 0) ? req.query
       .then(prods => {
           if(prods.length > 0) {
               res.status(200).json({
-                  
-              })
+                  count: prods.length,
+                  products: prods
+              });
+          } else {
+              res.json({message: 'No Products found'});
           }
-      })
+      }).catch(err => console.log(err));
 });
 
 module.exports = router;
