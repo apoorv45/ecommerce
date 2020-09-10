@@ -5,7 +5,7 @@ let conn = new MySqli({
     port: 3306,
     user: 'mega boss',
     passwd: 'bhushan77',
-    db: 'eccommerce_shop'
+    db: 'mega_shop'
 });
 
 let db = conn.emit( false, '');
