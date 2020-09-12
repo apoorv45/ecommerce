@@ -72,12 +72,29 @@ router.get('/:id',(req, res) => {
 
 /* Place a New Order */
 router.post('/new',(req,res) => {
-       //let userId = req.body.userId;
 
-             let {userId,products} = req.body;
-               console.log(userId, products);
+    let{userId, products} = req.body;
+
+    if (userId != null && userId > 0 && !isNaN(userId))
+    {
+        database.table('orders')
+            .insert({
+                user_id: userId
+            }).then(newOrderId => {
+
+                if(newOrderId > 0){
+                    products.forEach(async (p) => {
+
+                        let data = await database.table('products').filter({id: p.id}).withFields([])
 
 
+
+                    });
+                }
+
+
+        }).catch(err => console.log(err));
+    }
 
 });
 
