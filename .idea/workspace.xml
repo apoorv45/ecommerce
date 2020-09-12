@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b699331-4fd6-44c3-bb49-273c262645e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/orders.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
       <updated>1599658831236</updated>
       <workItem from="1599658840291" duration="18620000" />
       <workItem from="1599715609069" duration="28272000" />
-      <workItem from="1599924210017" duration="5379000" />
+      <workItem from="1599924210017" duration="13936000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1599661006933</created>
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599748385243</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sixth commit">
+      <created>1599932417508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599932417508</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,17 +112,18 @@
     <MESSAGE value="third commit" />
     <MESSAGE value="fourth commit" />
     <MESSAGE value="fifth commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="fifth commit" />
+    <MESSAGE value="sixth commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="sixth commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599739033758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599739033758" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599748379174">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1599932415860">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599748379174" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1599932415860" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1599728607447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -137,10 +144,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599675471479" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599748396155">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599932434724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599748396155" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599932434724" />
     <state x="478" y="12" width="580" height="801" key="find.popup" timestamp="1599659031428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -149,5 +156,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599663265277" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/orders.js</url>
+          <line>73</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

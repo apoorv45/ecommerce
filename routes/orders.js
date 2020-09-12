@@ -85,17 +85,59 @@ router.post('/new',(req,res) => {
                 if(newOrderId > 0){
                     products.forEach(async (p) => {
 
-                        let data = await database.table('products').filter({id: p.id}).withFields([])
+                        let data = await database.table('products').filter({id: p.id}).withFields(['quantity']).get();
 
+                        let inCart = p.incart;
 
+                        // Deduct the number of  pieces Orderd from the quantity column in  database
+                        if(data.quantity > 0) {
+                            data.quantity = data.quantity - inCart;
+
+                            if (data.quantity < 0) {
+                                data.quantity = 0;
+                            }
+
+                        }else {
+                            data.quantity = 0;
+                        }
+
+                        // Insert Order Details W.R.T The Newly Generated Order ID
+                        database.table('orders_details')
+                            .insert({
+                                order_id: newOrderId,
+                                product_id: p.id,
+                                quantity: inCart
+                            }).then(newId => {
+                                database.table('products')
+                                    .filter({id: p.id})
+                                    .update({
+                                        quantity: data.quantity
+                                    }).then(successNum => {}).catch(err => console.log(err));
+                        }).catch(err => console.log(err));
 
                     });
+                } else {
+                    res.json({message: 'New Order failed while adding order details', success: false})
                 }
-
-
+                res.json({
+                    message: `order successfully palced with order id ${newOrderId}`,
+                    success: true,
+                    order_id: newOrderId,
+                    products: products
+                });
         }).catch(err => console.log(err));
     }
+    else{
+        res.json({message: 'New order failed', success: false});
+    }
 
+});
+
+/* Fake Payment Gateway Call */
+router.post('/payment',(req,res) => {
+    setTimeout(() => {
+        res.status(200).json({success: true})
+    },3000);
 });
 
 module.exports = router;
